@@ -1,0 +1,96 @@
+{
+  "build": "h80987f9_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main",
+  "constrains": [],
+  "depends": [
+    "aws-c-common >=0.8.5,<0.8.6.0a0"
+  ],
+  "extracted_package_dir": "/Users/ifshita/miniconda3/config/pkgs/aws-c-compression-0.2.16-h80987f9_0",
+  "files": [
+    "include/aws/compression/compression.h",
+    "include/aws/compression/exports.h",
+    "include/aws/compression/huffman.h",
+    "lib/aws-c-compression/cmake/aws-c-compression-config.cmake",
+    "lib/aws-c-compression/cmake/shared/aws-c-compression-targets-release.cmake",
+    "lib/aws-c-compression/cmake/shared/aws-c-compression-targets.cmake",
+    "lib/libaws-c-compression.1.0.0.dylib",
+    "lib/libaws-c-compression.dylib"
+  ],
+  "fn": "aws-c-compression-0.2.16-h80987f9_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/Users/ifshita/miniconda3/config/pkgs/aws-c-compression-0.2.16-h80987f9_0",
+    "type": 1
+  },
+  "md5": "850f38951941bf67fde120194fc14aa5",
+  "name": "aws-c-compression",
+  "package_tarball_full_path": "/Users/ifshita/miniconda3/config/pkgs/aws-c-compression-0.2.16-h80987f9_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/aws/compression/compression.h",
+        "path_type": "hardlink",
+        "sha256": "257981665a69a0c2b28ea0490f615da59610a1da33f37dbb193d2a71d4389695",
+        "sha256_in_prefix": "257981665a69a0c2b28ea0490f615da59610a1da33f37dbb193d2a71d4389695",
+        "size_in_bytes": 1034
+      },
+      {
+        "_path": "include/aws/compression/exports.h",
+        "path_type": "hardlink",
+        "sha256": "8851c4f63053a1d90b17eb29ea4bb477cdfcb315090d06933b18e9710b85dba8",
+        "sha256_in_prefix": "8851c4f63053a1d90b17eb29ea4bb477cdfcb315090d06933b18e9710b85dba8",
+        "size_in_bytes": 1120
+      },
+      {
+        "_path": "include/aws/compression/huffman.h",
+        "path_type": "hardlink",
+        "sha256": "acd5a9db5c6f471f08894615527c3d937757083b67a06384e35f5b3b9b0b41bc",
+        "sha256_in_prefix": "acd5a9db5c6f471f08894615527c3d937757083b67a06384e35f5b3b9b0b41bc",
+        "size_in_bytes": 4696
+      },
+      {
+        "_path": "lib/aws-c-compression/cmake/aws-c-compression-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "0b355e8406ff62a1379aa02bce03381d4489a1df03ceea0ef4ff5d6aa9e54e59",
+        "sha256_in_prefix": "0b355e8406ff62a1379aa02bce03381d4489a1df03ceea0ef4ff5d6aa9e54e59",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "lib/aws-c-compression/cmake/shared/aws-c-compression-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "7048f23514265178f848a1828a5aadccf359ee53dfe306a7144f9519d28f9aec",
+        "sha256_in_prefix": "7048f23514265178f848a1828a5aadccf359ee53dfe306a7144f9519d28f9aec",
+        "size_in_bytes": 943
+      },
+      {
+        "_path": "lib/aws-c-compression/cmake/shared/aws-c-compression-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "9c34e54ec2a54cdbba9000cb3cb7908fca956f9074964392c44aa008e159e5c6",
+        "sha256_in_prefix": "9c34e54ec2a54cdbba9000cb3cb7908fca956f9074964392c44aa008e159e5c6",
+        "size_in_bytes": 4254
+      },
+      {
+        "_path": "lib/libaws-c-compression.1.0.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "567a1f5fbb7418b368989f39c5a2c45cdb371b04cf436582b7c08a34aadc7d4b",
+        "sha256_in_prefix": "567a1f5fbb7418b368989f39c5a2c45cdb371b04cf436582b7c08a34aadc7d4b",
+        "size_in_bytes": 69232
+      },
+      {
+        "_path": "lib/libaws-c-compression.dylib",
+        "path_type": "softlink",
+        "sha256": "567a1f5fbb7418b368989f39c5a2c45cdb371b04cf436582b7c08a34aadc7d4b",
+        "size_in_bytes": 69232
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "1239724ac9b4686f6f8d0e46d2f74f35a202771c9557aa9b55b81126ed85f454",
+  "size": 17977,
+  "subdir": "osx-arm64",
+  "timestamp": 1706690838000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/aws-c-compression-0.2.16-h80987f9_0.conda",
+  "version": "0.2.16"
+}

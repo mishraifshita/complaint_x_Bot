@@ -1,0 +1,8 @@
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+
+Name: re2
+Description: RE2 is a fast, safe, thread-friendly regular expression engine.
+Version: 0.0.0
+Cflags: -pthread -I${includedir}
+Libs: -pthread -L${libdir} -lre2

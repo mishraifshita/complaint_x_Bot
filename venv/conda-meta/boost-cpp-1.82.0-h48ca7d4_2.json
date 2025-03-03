@@ -1,0 +1,32 @@
+{
+  "build": "h48ca7d4_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main",
+  "constrains": [],
+  "depends": [
+    "libcxx >=14.0.6",
+    "libboost 1.82.0 h0bc93f9_2"
+  ],
+  "extracted_package_dir": "/Users/ifshita/miniconda3/config/pkgs/boost-cpp-1.82.0-h48ca7d4_2",
+  "files": [],
+  "fn": "boost-cpp-1.82.0-h48ca7d4_2.conda",
+  "license": "BSL-1.0",
+  "link": {
+    "source": "/Users/ifshita/miniconda3/config/pkgs/boost-cpp-1.82.0-h48ca7d4_2",
+    "type": 1
+  },
+  "md5": "46e51d0bbbdf5da6b626c50f5c983c90",
+  "name": "boost-cpp",
+  "package_tarball_full_path": "/Users/ifshita/miniconda3/config/pkgs/boost-cpp-1.82.0-h48ca7d4_2.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "3327ebeeab39bb69ae953ef6267816d89c933b18f6fb6b5d122b93b935011a76",
+  "size": 12231,
+  "subdir": "osx-arm64",
+  "timestamp": 1696762172000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/boost-cpp-1.82.0-h48ca7d4_2.conda",
+  "version": "1.82.0"
+}

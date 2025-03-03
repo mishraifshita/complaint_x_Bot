@@ -1,0 +1,12 @@
+prefix=/Users/ifshita/complaint_x_bot/venv
+exec_prefix=${prefix}
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+
+Name: absl_civil_time
+Description: Abseil civil_time library
+URL: https://abseil.io/
+Version: 20240116
+Requires:
+Libs: -L${libdir}  -labsl_civil_time 
+Cflags: -I${includedir} -Wno-float-conversion -Wno-implicit-float-conversion -Wno-implicit-int-float-conversion -Wno-unknown-warning-option -DNOMINMAX

@@ -1,0 +1,14 @@
+prefix=/Users/ifshita/complaint_x_bot/venv
+exec_prefix=/Users/ifshita/complaint_x_bot/venv
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 24.3.18
+Requires: 
+Requires.private: 
+Libs: -L/Users/ifshita/complaint_x_bot/venv/lib -lfreetype
+Libs.private: -lz -L/Users/ifshita/complaint_x_bot/venv/lib -lpng16 -lz
+Cflags: -I${includedir}/freetype2

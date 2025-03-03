@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/Users/ifshita/complaint_x_bot/venv
+exec_prefix=/Users/ifshita/complaint_x_bot/venv
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+
+Name: libevent
+Description: libevent is an asynchronous notification event loop library
+Version: 2.1.12
+Requires:
+Conflicts:
+Libs: -L${libdir} -levent
+Libs.private: 
+Cflags: -I${includedir}
+

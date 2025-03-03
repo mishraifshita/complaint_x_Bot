@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/Users/ifshita/complaint_x_bot/venv
+exec_prefix=/Users/ifshita/complaint_x_bot/venv
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+
+Name: libevent_pthreads
+Description: libevent_pthreads adds pthreads-based threading support to libevent
+Version: 2.1.12
+Requires: libevent
+Conflicts:
+Libs: -L${libdir} -levent_pthreads
+Libs.private:  
+Cflags: -I${includedir} 
+

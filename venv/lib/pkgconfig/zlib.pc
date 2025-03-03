@@ -1,0 +1,13 @@
+prefix=/Users/ifshita/complaint_x_bot/venv
+exec_prefix=/Users/ifshita/complaint_x_bot/venv
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+sharedlibdir=/Users/ifshita/complaint_x_bot/venv/lib
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

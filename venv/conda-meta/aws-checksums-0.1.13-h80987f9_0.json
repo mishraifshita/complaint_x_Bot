@@ -1,0 +1,88 @@
+{
+  "build": "h80987f9_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main",
+  "constrains": [],
+  "depends": [
+    "aws-c-common >=0.8.5,<0.8.6.0a0"
+  ],
+  "extracted_package_dir": "/Users/ifshita/miniconda3/config/pkgs/aws-checksums-0.1.13-h80987f9_0",
+  "files": [
+    "include/aws/checksums/crc.h",
+    "include/aws/checksums/exports.h",
+    "lib/aws-checksums/cmake/aws-checksums-config.cmake",
+    "lib/aws-checksums/cmake/shared/aws-checksums-targets-release.cmake",
+    "lib/aws-checksums/cmake/shared/aws-checksums-targets.cmake",
+    "lib/libaws-checksums.1.0.0.dylib",
+    "lib/libaws-checksums.dylib"
+  ],
+  "fn": "aws-checksums-0.1.13-h80987f9_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/Users/ifshita/miniconda3/config/pkgs/aws-checksums-0.1.13-h80987f9_0",
+    "type": 1
+  },
+  "md5": "79b18407b14e4ee31c08f5261f76b8ce",
+  "name": "aws-checksums",
+  "package_tarball_full_path": "/Users/ifshita/miniconda3/config/pkgs/aws-checksums-0.1.13-h80987f9_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/aws/checksums/crc.h",
+        "path_type": "hardlink",
+        "sha256": "b4c0c0eecf89b90e1a663d2ed988b496b54e5a4662b30662768f7a3ff6e91442",
+        "sha256_in_prefix": "b4c0c0eecf89b90e1a663d2ed988b496b54e5a4662b30662768f7a3ff6e91442",
+        "size_in_bytes": 1115
+      },
+      {
+        "_path": "include/aws/checksums/exports.h",
+        "path_type": "hardlink",
+        "sha256": "acbef54b569ac741dc9a123b154de88d49cf8ce78b64774ba0a48ecded5b196c",
+        "sha256_in_prefix": "acbef54b569ac741dc9a123b154de88d49cf8ce78b64774ba0a48ecded5b196c",
+        "size_in_bytes": 1131
+      },
+      {
+        "_path": "lib/aws-checksums/cmake/aws-checksums-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "ac1243406c196f025ef849fc9bb322194c13ba1c54cd86bf1e4eac984b876b80",
+        "sha256_in_prefix": "ac1243406c196f025ef849fc9bb322194c13ba1c54cd86bf1e4eac984b876b80",
+        "size_in_bytes": 506
+      },
+      {
+        "_path": "lib/aws-checksums/cmake/shared/aws-checksums-targets-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "99de17647ade59d7af623da9e9499ea9d5c461bae6e520f4d9f2408c4c8ce6f2",
+        "sha256_in_prefix": "99de17647ade59d7af623da9e9499ea9d5c461bae6e520f4d9f2408c4c8ce6f2",
+        "size_in_bytes": 911
+      },
+      {
+        "_path": "lib/aws-checksums/cmake/shared/aws-checksums-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "1b8188d3d65afc7c05c2da7baac0ac2c8b59d34ee5375208217a4d07b6e11501",
+        "sha256_in_prefix": "1b8188d3d65afc7c05c2da7baac0ac2c8b59d34ee5375208217a4d07b6e11501",
+        "size_in_bytes": 4232
+      },
+      {
+        "_path": "lib/libaws-checksums.1.0.0.dylib",
+        "path_type": "hardlink",
+        "sha256": "3065e3a3db3513b5a668ad0278958bbe9fc7a88a8e71fb7f09b209aebc04d312",
+        "sha256_in_prefix": "3065e3a3db3513b5a668ad0278958bbe9fc7a88a8e71fb7f09b209aebc04d312",
+        "size_in_bytes": 100880
+      },
+      {
+        "_path": "lib/libaws-checksums.dylib",
+        "path_type": "softlink",
+        "sha256": "3065e3a3db3513b5a668ad0278958bbe9fc7a88a8e71fb7f09b209aebc04d312",
+        "size_in_bytes": 100880
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "3b638cba0172680a7a17852b3a859004a7f0c11ffc1bfc425b39c377f6afc90f",
+  "size": 49374,
+  "subdir": "osx-arm64",
+  "timestamp": 1706192041000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/aws-checksums-0.1.13-h80987f9_0.conda",
+  "version": "0.1.13"
+}

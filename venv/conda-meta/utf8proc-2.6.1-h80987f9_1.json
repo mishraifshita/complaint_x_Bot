@@ -1,0 +1,63 @@
+{
+  "build": "h80987f9_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main",
+  "constrains": [],
+  "depends": [],
+  "extracted_package_dir": "/Users/ifshita/miniconda3/config/pkgs/utf8proc-2.6.1-h80987f9_1",
+  "files": [
+    "include/utf8proc.h",
+    "lib/libutf8proc.2.4.1.dylib",
+    "lib/libutf8proc.2.dylib",
+    "lib/libutf8proc.dylib"
+  ],
+  "fn": "utf8proc-2.6.1-h80987f9_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/Users/ifshita/miniconda3/config/pkgs/utf8proc-2.6.1-h80987f9_1",
+    "type": 1
+  },
+  "md5": "5f09e26f39ec8531953913f9194cedbb",
+  "name": "utf8proc",
+  "package_tarball_full_path": "/Users/ifshita/miniconda3/config/pkgs/utf8proc-2.6.1-h80987f9_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/utf8proc.h",
+        "path_type": "hardlink",
+        "sha256": "01958a0a4c23c17aeb20a9a297df61b8541dd87aa90d04007e2742fd8eed3269",
+        "sha256_in_prefix": "01958a0a4c23c17aeb20a9a297df61b8541dd87aa90d04007e2742fd8eed3269",
+        "size_in_bytes": 31001
+      },
+      {
+        "_path": "lib/libutf8proc.2.4.1.dylib",
+        "path_type": "hardlink",
+        "sha256": "0a8780cebe3bcfd021b29321df4bac785a4301e47cfc428d3b60b1059f357442",
+        "sha256_in_prefix": "0a8780cebe3bcfd021b29321df4bac785a4301e47cfc428d3b60b1059f357442",
+        "size_in_bytes": 401200
+      },
+      {
+        "_path": "lib/libutf8proc.2.dylib",
+        "path_type": "hardlink",
+        "sha256": "f7b4afabb4fac22c61635447a878dacf5dbdde072ff6248d3996a65df0a9024b",
+        "sha256_in_prefix": "f7b4afabb4fac22c61635447a878dacf5dbdde072ff6248d3996a65df0a9024b",
+        "size_in_bytes": 401184
+      },
+      {
+        "_path": "lib/libutf8proc.dylib",
+        "path_type": "hardlink",
+        "sha256": "dc3d95b0e974358eadc7ea62b7dffa7a885bb4ec7b5aae1ada5ff7b21705a230",
+        "sha256_in_prefix": "dc3d95b0e974358eadc7ea62b7dffa7a885bb4ec7b5aae1ada5ff7b21705a230",
+        "size_in_bytes": 401184
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "20de584db220a3919bafcd2a3635fe20f85d00be7f6f45c8ba272b1513e66cdb",
+  "size": 98853,
+  "subdir": "osx-arm64",
+  "timestamp": 1706894678000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/utf8proc-2.6.1-h80987f9_1.conda",
+  "version": "2.6.1"
+}

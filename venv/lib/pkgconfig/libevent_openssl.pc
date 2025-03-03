@@ -1,0 +1,16 @@
+#libevent pkg-config source file
+
+prefix=/Users/ifshita/complaint_x_bot/venv
+exec_prefix=/Users/ifshita/complaint_x_bot/venv
+libdir=/Users/ifshita/complaint_x_bot/venv/lib
+includedir=/Users/ifshita/complaint_x_bot/venv/include
+
+Name: libevent_openssl
+Description: libevent_openssl adds openssl-based TLS support to libevent
+Version: 2.1.12
+Requires: libevent
+Conflicts:
+Libs: -L${libdir} -levent_openssl
+Libs.private:   -L/Users/ifshita/complaint_x_bot/venv/lib/libssl.dylib -L/Users/ifshita/complaint_x_bot/venv/lib/libcrypto.dylib
+Cflags: -I${includedir} 
+
