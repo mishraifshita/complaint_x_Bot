@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Support Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="agent-container">
+        <div class="chat-container agent-view">
+            <div class="chat-header">
+                <h1>Agent Support Interface</h1>
+                <div class="session-info">
+                    <p>Session ID: <span id="session-id">{{ session_id }}</span></p>
+                </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+                <div class="welcome-message">
+                    <p>Welcome to the agent interface for session: {{ session_id }}</p>
+                    <p class="note">You are connected to the customer's chat.</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <form id="chat-form">
+                    <input type="text" id="message-input" placeholder="Type your response here..." autocomplete="off">
+                    <button type="submit" class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="ai-assistance-panel">
+            <div class="panel-header">
+                <h2>AI Assistance</h2>
+            </div>
+            <div class="ai-suggestions" id="ai-suggestions">
+                <p class="empty-state">AI-suggested responses will appear here when the customer sends a message.</p>
+            </div>
+            <div class="action-buttons">
+                <button id="use-suggestion" class="btn btn-primary" disabled>Use Suggestion</button>
+                <button id="refresh-suggestion" class="btn btn-secondary" disabled>
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sessionId = "{{ session_id }}";
+            const socket = io();
+            let currentSuggestion = '';
+            
+            // Join the room
+            socket.emit('join', {
+                session_id: sessionId,
+                is_agent: true
+            });
+            
+            // Request chat history
+            socket.emit('get_history', {
+                session_id: sessionId
+            });
+            
+            // Handle received messages
+            socket.on('receive_message', function(data) {
+                addMessageToChat(data.sender, data.message);
+            });
+            
+            // Handle status messages
+            socket.on('status', function(data) {
+                addStatusMessage(data.msg);
+            });
+            
+            // Handle chat history
+            socket.on('chat_history', function(data) {
+                const chatMessages = document.getElementById('chat-messages');
+                // Clear existing messages except welcome message
+                const welcomeMessage = document.querySelector('.welcome-message');
+                chatMessages.innerHTML = '';
+                chatMessages.appendChild(welcomeMessage);
+                
+                // Add history messages
+                data.history.forEach(item => {
+                    addMessageToChat(item.sender, item.message);
+                });
+                
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            });
+            
+            // Handle AI suggestions
+            socket.on('ai_suggestion', function(data) {
+                const aiSuggestions = document.getElementById('ai-suggestions');
+                const suggestion = data.message;
+                currentSuggestion = suggestion;
+                
+                // Update the AI suggestion panel
+                aiSuggestions.innerHTML = `
+                    <div class="suggestion">
+                        <p>${suggestion}</p>
+                    </div>
+                `;
+                
+                // Enable buttons
+                document.getElementById('use-suggestion').disabled = false;
+                document.getElementById('refresh-suggestion').disabled = false;
+                
+                // Add visual indicator
+                aiSuggestions.classList.add('new-suggestion');
+                setTimeout(() => {
+                    aiSuggestions.classList.remove('new-suggestion');
+                }, 1000);
+            });
+            
+            // Form submission
+            document.getElementById('chat-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const messageInput = document.getElementById('message-input');
+                const message = messageInput.value.trim();
+                
+                if (message) {
+                    // Send message to server
+                    socket.emit('send_message', {
+                        session_id: sessionId,
+                        sender: 'agent',
+                        message: message,
+                        need_ai_response: false
+                    });
+                    
+                    // Clear input
+                    messageInput.value = '';
+                }
+            });
+            
+            // Use suggestion button
+            document.getElementById('use-suggestion').addEventListener('click', function() {
+                if (currentSuggestion) {
+                    document.getElementById('message-input').value = currentSuggestion;
+                    document.getElementById('message-input').focus();
+                }
+            });
+            
+            // Refresh suggestion button
+            document.getElementById('refresh-suggestion').addEventListener('click', function() {
+                // This would typically request a new AI suggestion
+                // For demo purposes, we're just showing a notification
+                alert('In a production environment, this would generate a new AI suggestion.');
+            });
+            
+            // Function to add message to chat
+            function addMessageToChat(sender, message) {
+                const chatMessages = document.getElementById('chat-messages');
+                const messageElement = document.createElement('div');
+                messageElement.className = `message ${sender}-message`;
+                
+                const senderLabel = sender.charAt(0).toUpperCase() + sender.slice(1);
+                messageElement.innerHTML = `
+                    <div class="message-header">
+                        <span class="sender">${senderLabel}</span>
+                    </div>
+                    <div class="message-content">${message}</div>
+                `;
+                
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Function to add status message
+            function addStatusMessage(message) {
+                const chatMessages = document.getElementById('chat-messages');
+                const statusElement = document.createElement('div');
+                statusElement.className = 'status-message';
+                statusElement.textContent = message;
+                
+                chatMessages.appendChild(statusElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Handle window close
+            window.addEventListener('beforeunload', function() {
+                socket.emit('leave', {
+                    session_id: sessionId,
+                    is_agent: true
+                });
+            });
+        });
+    </script>
+</body>
+</html>
